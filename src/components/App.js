@@ -1,34 +1,17 @@
-
-// import React from "react";
-
-// import '../App.css';
-// import Header from './Header';
-
-// function App() {
-
-//   return (
-//     <React.Fragment>
-//       <div>
-//         <Header />
-//       </div>
-//     </React.Fragment>
-//   );
-// }
-
-// export default App;
-
-
-// import React from 'react';
-
-import '../App.css';
+import React from 'react';
+import '../styles/App.css';
 import Header from './Header';
+import AboutUs from './AboutUs';
 
 function App() {
+
   return (
     <React.Fragment>
-      <div>
+      <div className='container-fluid'>
         <Header />
+        <AboutUs />
       </div>
+
     </React.Fragment>
   )
 }
