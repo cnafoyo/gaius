@@ -1,6 +1,15 @@
 import React from 'react';
 import Product from './Product';
+import '../styles/productList.css';
 
+import tshirt from '../images/products/tshirt.png';
+import backpack from '../images/products/backpack.png';
+import pants from '../images/products/pants.png';
+import trekkingshoes from '../images/products/trekkingshoes.png';
+import giacket from '../images/products/giacket.png';
+import tshirt_ladies from '../images/products/tshirt_ladies.png';
+
+// ActualProductList.
 const actualProductList = [
     {
         name: 'T-Shirt',
@@ -37,14 +46,34 @@ const actualProductList = [
 function ProductList() {
     return (
         <React.Fragment>
-            <h1>Yolomy Products</h1>
-            {actualProductList.map((product) => (
-                <Product
-                    name={product.name}
-                    price={product.price}
-                    key={product.id}
-                />
-            ))}
+            <div className='container' id="products">
+                <div className="row pdg-line">
+                    {/* {Product Title} */}
+                    <div className="col-4 col-sm-4 col-md-4">
+                        <div className="abt-top-border"></div>
+                    </div>
+                    <div className="col-4 col-sm-4 col-md-4">
+                        <p className="product-title text-center">PRODUCTS</p>
+                    </div>
+                    <div className="col-4 col-sm-4 col-md-4">
+                        <div className="abt-top-border"></div>
+                    </div>
+                </div>
+                {/* Product List */}
+                <div className="men-products">
+                    <div className="row">
+                        {actualProductList.map((product) =>
+                            <product
+                                Photo={product.photo}
+                                name={product.name}
+                                price={product.price}
+                                id={product.id}
+                                key={product.id} />
+                        )}
+                    </div>
+                </div>
+            </div>
+
 
         </React.Fragment>
     )
